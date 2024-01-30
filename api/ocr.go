@@ -26,11 +26,9 @@ type FileContent struct {
 	File *multipart.FileHeader `form:"file" binding:"required"`
 }
 
-// Ocr is the handler for OCR processing
 func Ocr(c *gin.Context) {
 	var fileContent FileContent
 
-	// Validate the input file in the multipart form
 	if err := c.ShouldBind(&fileContent); err != nil {
 		c.JSON(400, gin.H{
 			"message": "Bad Request",
