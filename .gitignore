@@ -1,0 +1,7 @@
+# Ignore .env files
+*.env
+
+# Ignore config files
+/configs/*.json
+/configs/*.yaml
+/configs/*.yml
