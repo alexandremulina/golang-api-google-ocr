@@ -25,6 +25,7 @@ type FileContent struct {
 	File *multipart.FileHeader `form:"file" binding:"required"`
 }
 
+// API REQUEST METHOD
 func Ocr(c *gin.Context) {
 	var fileContent FileContent
 
