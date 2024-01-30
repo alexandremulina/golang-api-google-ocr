@@ -13,7 +13,7 @@ import (
 	"google.golang.org/api/option"
 )
 
-// HealthCheck is a simple health check endpoint
+// HealthCheck
 func HealthCheck(c *gin.Context) {
 	c.JSON(200, gin.H{
 		"message": "OK",
@@ -21,7 +21,6 @@ func HealthCheck(c *gin.Context) {
 	})
 }
 
-// FileContent represents the structure of the file in the multipart form
 type FileContent struct {
 	File *multipart.FileHeader `form:"file" binding:"required"`
 }
